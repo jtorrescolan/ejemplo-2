@@ -1,0 +1,17 @@
+{
+  "name": "ejemplo-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jtorrescolan",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^1.9.1",
+    "gulp": "^3.8.10",
+    "gulp-jade": "^0.11.0",
+    "gulp-stylus": "^2.0.0"
+  }
+}
