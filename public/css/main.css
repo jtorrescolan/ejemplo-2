@@ -1,1 +1,202 @@
-main
+body {
+  font-size: 14px;
+}
+.texto-centrado {
+  text-align: center;
+}
+.ancho-maximo {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.ancho-maximo-1 {
+  max-width: 1349px;
+  margin: 0 auto;
+}
+.cabecera {
+  background-image: url("../images/cd-intro-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  *height: 667px;
+  width: 100%;
+  position: relative;
+}
+.titulo-principal {
+  position: absolute;
+  z-index: 100;
+  left: 0px;
+  top: 42%;
+  bottom: 0px;
+  right: 0px;
+}
+.titulo-principal h1 {
+  color: #fff;
+  font-size: 70px;
+  text-align: center;
+}
+.titulo-principal i {
+  font-style: italic;
+}
+#who-we-are,
+#who-we-are-1,
+#what-we-do,
+#last-post,
+#contact-us {
+  padding: 70px 0px;
+}
+.sub-title {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #d39e2f;
+  font-weight: bold;
+}
+.sub-title h4 {
+  font-size: 16px;
+}
+.sub-title h6 {
+  font-size: 14px;
+  color: #5a5c5e;
+}
+.title {
+  margin-bottom: 30px;
+  text-transform: capitalize;
+  color: #5a5c5e;
+}
+.title h1 {
+  font-size: 50px;
+}
+.title h3 {
+  font-size: 30px;
+}
+.descripcion {
+  margin-bottom: 40px;
+}
+.descripcion p {
+  font-size: 22px;
+  line-height: 31px;
+  color: #3f3f41;
+}
+.descripcion-blog .descripcion p {
+  font-size: 18px;
+}
+.contenedor-boton button {
+  border: 1px solid #000;
+  background: #fff;
+  padding: 22px 0px;
+  text-transform: capitalize;
+  font-size: 16px;
+  width: 260px;
+  color: #3f3f41;
+}
+.contenedor-boton button:hover {
+  color: #d39e2f;
+  border: 1px solid #d39e2f;
+}
+.boton-blog button {
+  width: 150px;
+  padding: 15px;
+}
+.contenedor-imagen {
+  margin: 2px;
+  background: #808080;
+  height: 325px;
+}
+.contenedor-imagen img {
+  width: 100%;
+  height: auto;
+}
+.contenedor-equipo {
+  margin: 2px;
+}
+.contenedor-blog {
+  margin-bottom: 80px;
+}
+.foto-equipo {
+  min-height: 200px;
+  background: #808080;
+}
+.imagen-blog {
+  height: 367px;
+  background: #808080;
+}
+.descripcion-equipo {
+  padding: 15px 15px 1px 15px;
+  background: #f9f9f9;
+}
+.descripcion-equipo .descripcion p {
+  font-size: 18px;
+  line-height: 22px;
+}
+.descripcion-blog {
+  padding: 40px 40px 60px 40px;
+  background: #f9f9f9;
+}
+#mapa {
+  height: 300px;
+  background: #808080;
+  width: 100%;
+}
+.contenedor-contacto-padre {
+  background: #f9f9f9;
+}
+.contenedor-contacto>div {
+  margin-bottom: 40px;
+}
+.titulo-contacto h4 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #5a5c5e;
+  font-weight: bold;
+}
+.descripcion-contacto>h3 {
+  font-size: 25px;
+  text-transform: capitalize;
+  color: #5d6164;
+  margin-bottom: 10px;
+  font-weight: lighter;
+}
+.pie-de-pagina {
+  background: #eee;
+}
+.contenedor-pie-pagina {
+  padding: 35px 0;
+}
+.contenedor-pie-pagina>div h1 {
+  font-size: 20px;
+  color: #5a5c5e;
+}
+.grid>div {
+  float: left;
+  min-height: 5px;
+}
+.grid:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+.grid>.columna-3 {
+  width: 25%;
+}
+.grid>.columna-4 {
+  width: 33.3%;
+}
+.grid>.columna-6 {
+  width: 50%;
+}
+.p-t-50 {
+  padding-top: 50px;
+}
+.m-b-70 {
+  margin-bottom: 70px;
+}
+.m-b-50 {
+  margin-bottom: 50px;
+}
+.no-capitalize>h3 {
+  text-transform: none !important;
+}
+.t-a-l {
+  text-align: left;
+}
+.t-a-r {
+  text-align: right;
+}
