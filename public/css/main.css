@@ -1,6 +1,9 @@
 body {
   font-size: 14px;
 }
+button {
+  outline: none;
+}
 .texto-centrado {
   text-align: center;
 }
@@ -16,7 +19,6 @@ body {
   background-image: url("../images/cd-intro-bg.jpg");
   background-size: cover;
   background-position: center center;
-  *height: 667px;
   width: 100%;
   position: relative;
 }
@@ -78,7 +80,8 @@ body {
 .descripcion-blog .descripcion p {
   font-size: 18px;
 }
-.contenedor-boton button {
+.contenedor-boton a {
+  display: block;
   border: 1px solid #000;
   background: #fff;
   padding: 22px 0px;
@@ -86,23 +89,48 @@ body {
   font-size: 16px;
   width: 260px;
   color: #3f3f41;
+  text-decoration: none;
+  margin: 0 auto;
 }
-.contenedor-boton button:hover {
+.contenedor-boton a:hover {
   color: #d39e2f;
   border: 1px solid #d39e2f;
 }
-.boton-blog button {
-  width: 150px;
+.boton-blog a {
+  width: 100px;
   padding: 15px;
+  margin: 0;
+  text-align: center;
 }
 .contenedor-imagen {
   margin: 2px;
   background: #808080;
-  height: 325px;
+  height: 300px;
+  background-size: cover;
 }
-.contenedor-imagen img {
-  width: 100%;
-  height: auto;
+.ctn-imagen-1 {
+  background-image: url("../images/heydays_nora01-1440x900.jpg");
+}
+.ctn-imagen-2 {
+  background-image: url("../images/heydays_berg_23-e1386238978376.jpg");
+}
+.ctn-imagen-3 {
+  background-image: url("../images/heydays_premiss_10.jpg");
+}
+.ctn-imagen-4 {
+  background-image: url("../images/heydays_goa_2b.jpg");
+}
+.ctn-imagen-5 {
+  background-image: url("../images/Postalia.jpg");
+}
+.ctn-imagen-6 {
+  background-image: url("../images/heydays_mellbye_11-1440x900.jpg");
+}
+.ctn-imagen-7 {
+  background-image: url("../images/heydays_sjemmedal_05-1440x900.jpg");
+}
+.ctn-imagen-8 {
+  background-image: url("../images/heydays_abn2012_071-1440x900.jpg");
 }
 .contenedor-equipo {
   margin: 2px;
