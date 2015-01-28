@@ -2,7 +2,6 @@ var ANIMATION =(function(){
 	var fnFadeIn = function(element){
 		var opacity = 0;
 		element.style.display = 'block';
-		console.log(opacity);
 		function fade(){
 			opacity = opacity+0.1;
 			element.style.opacity = opacity;
@@ -14,11 +13,22 @@ var ANIMATION =(function(){
 	}
 
 	var fnFadeOut = function(element){
-		
+		var opacity = 1;
+		function fade(){
+			opacity = opacity - 0.1;
+			element.style.opacity = opacity;
+			if(element.style.opacity-0.1===0){
+				clearInterval(id);
+				element.style.display = "none";
+			}
+		}
+
+		var id = setInterval(fade, 10);
 	}
 
 	return{
-		fnFadeIn: fnFadeIn
+		fnFadeIn: fnFadeIn,
+		fnFadeOut: fnFadeOut
 	}
 })();
 
@@ -74,7 +84,7 @@ var INDEX = (function(ANIMATION){
 				botones[0].style.display = 'block';
 				botones[1].style.display = 'none';
 				menu_principal.setAttribute('activado', 'false');
-				contenedor_menu.style.display = 'none';
+				ANIMATION.fnFadeOut(contenedor_menu);
 				document.body.style.overflowY = 'auto'	
 			}
 		}
