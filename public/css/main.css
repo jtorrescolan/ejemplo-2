@@ -70,6 +70,7 @@ button {
   z-index: 102;
   background: #2d3035;
   overflow-y: auto;
+  opacity: 0;
 }
 .nav-principal {
   padding-bottom: 40px;

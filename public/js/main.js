@@ -1,4 +1,28 @@
-var INDEX = (function(){
+var ANIMATION =(function(){
+	var fnFadeIn = function(element){
+		var opacity = 0;
+		element.style.display = 'block';
+		console.log(opacity);
+		function fade(){
+			opacity = opacity+0.1;
+			element.style.opacity = opacity;
+			if(element.style.opacity+0.1>1)
+				clearInterval(id);
+		}
+
+		var id = setInterval(fade, 10);
+	}
+
+	var fnFadeOut = function(element){
+		
+	}
+
+	return{
+		fnFadeIn: fnFadeIn
+	}
+})();
+
+var INDEX = (function(ANIMATION){
 
 	var fnCambiarTamanio = function(){
 		var height = window.innerHeight;
@@ -41,7 +65,8 @@ var INDEX = (function(){
 				botones[0].style.display = 'none';
 				botones[1].style.display = 'block';
 				menu_principal.setAttribute('activado', 'true');
-				contenedor_menu.style.display = 'block';
+				//contenedor_menu.style.display = 'block';
+				ANIMATION.fnFadeIn(contenedor_menu);
 				document.body.style.overflowY = 'hidden'
 			}
 			else{
@@ -62,7 +87,7 @@ var INDEX = (function(){
 		fnCargarMenuPrincipal: fnCargarMenuPrincipal
 	}
 
-})();
+})(ANIMATION);
 
 window.onload= function(){
 	
