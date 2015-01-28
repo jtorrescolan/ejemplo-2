@@ -13,7 +13,11 @@ var INDEX = (function(){
 	}
 
 	var fnCargarMapa = function(){
-
+		var mapOptions={
+			zoom: 8,
+			center: new google.maps.LatLng()
+		}
+		var map = new google.maps.Map(document.getElementById('mapa'), mapOptions);
 	}
 
 	var fnCargarMenuPrincipal = function(){
@@ -35,6 +39,7 @@ window.onload= function(){
 
 	INDEX.fnEventos();
 	INDEX.fnCambiarTamanio();
+	INDEX.fnCargarMapa();
 
 	/* Fin Página inicial*/
 }

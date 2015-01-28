@@ -107,6 +107,10 @@ button {
   background: #808080;
   height: 300px;
   background-size: cover;
+  cursor: pointer;
+}
+.contenedor-imagen:hover {
+  opacity: 0.5;
 }
 .ctn-imagen-1 {
   background-image: url("../images/heydays_nora01-1440x900.jpg");
@@ -141,10 +145,22 @@ button {
 .foto-equipo {
   min-height: 200px;
   background: #808080;
+  position: relative;
+}
+.foto-equipo img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 .imagen-blog {
-  height: 367px;
+  position: relative;
+  height: 365px;
   background: #808080;
+}
+.imagen-blog img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 .descripcion-equipo {
   padding: 15px 15px 1px 15px;
