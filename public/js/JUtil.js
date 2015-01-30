@@ -38,21 +38,22 @@
 				})(len);
 			}
 		},
-
 		fadeOut: function(){
-			/*var len = this.length;
+			var len = this.length;
+			var elemento = this;
 			while(len--){
 				var opacity = 1;
-				function fade(){
-					opacity = opacity - 0.1;
-					this[len].style.opacity = opacity;
-					if(this[len].style.opacity-0.1===0){
-						clearInterval(id);
-						this[len].style.display = "none";
-					}
-				}
-				var id = setInterval(fade, 10);
-			}*/
+				(function(index){
+					var id = setInterval(function(){
+						opacity = opacity - 0.1;
+						elemento[index].style.opacity = opacity;
+						if(elemento[index].style.opacity-0.1===0){
+							clearInterval(id);
+							elemento[index].style.display = "none";
+						}
+					}, 10);
+				})(len)
+			}
 		}
 	}
 

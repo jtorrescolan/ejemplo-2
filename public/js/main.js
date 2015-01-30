@@ -14,6 +14,9 @@ var INDEX = (function(){
 			document.getElementById('cabecera').style.height = height+'px';
 			document.querySelector('.contenedor-menu').style.height = (height-93)+'px';
 		}
+		window.onscroll = function(event){
+			console.log(event);
+		}
 	}
 
 	var fnCargarMapa = function(){
@@ -41,6 +44,7 @@ var INDEX = (function(){
 				document.querySelector('.cabecera-principal').style.backgroundColor = 'rgb(45, 48, 53)';
 				botones[0].style.display = 'none';
 				botones[1].style.display = 'block';
+				contenedor_menu.parentNode.style.paddingRight = '47px';
 				menu_principal.setAttribute('activado', 'true');
 				JUtil.get('.contenedor-menu').fadeIn();
 				document.body.style.overflowY = 'hidden'
@@ -49,8 +53,9 @@ var INDEX = (function(){
 				document.querySelector('.cabecera-principal').style.backgroundColor = 'transparent';
 				botones[0].style.display = 'block';
 				botones[1].style.display = 'none';
+				contenedor_menu.parentNode.style.paddingRight = '30px';
 				menu_principal.setAttribute('activado', 'false');
-				//JUtil.get('.contenedor-menu').fadeOut();
+				JUtil.get('.contenedor-menu').fadeOut();
 				document.body.style.overflowY = 'auto'	
 			}
 		}
