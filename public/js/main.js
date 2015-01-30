@@ -42,7 +42,7 @@ var INDEX = (function(){
 
 			if(menu_principal.getAttribute('activado')==='false'){
 				document.querySelector('.cabecera-principal').style.backgroundColor = 'rgb(45, 48, 53)';
-				botones[0].style.display = 'none';
+				JUtil.get('.bar-icon').rotate();
 				botones[1].style.display = 'block';
 				contenedor_menu.parentNode.style.paddingRight = '47px';
 				menu_principal.setAttribute('activado', 'true');

@@ -54,7 +54,34 @@
 					}, 10);
 				})(len)
 			}
+		},
+		rotate: function(){
+			var len = this.length;
+			var elemento = this;
+			while(len--){
+				(function(index){
+					var x=0;
+					var id = setInterval(function(){
+						elemento[index].style.webkitTransform = "rotate("+x+'deg)';
+						elemento[index].style.msTransform = "rotate("+x+'deg)';
+						elemento[index].style.mozTransform = "rotate("+x+'deg)';
+						elemento[index].style.transform = "rotate("+x+'deg)';
+						x=x+10;
+						if(x>360){
+							clearInterval(id);
+						}
+					},10)
+				})(len);
+			}
+
+			return this;
+		},
+		hide: function(){
+			var len = this.length;
+			var elemento = this;
+			while(len--){
+				elemento[len].style.display = 'none';
+			}
 		}
 	}
-
 })(window.JUtil = window.JUtil || {})
