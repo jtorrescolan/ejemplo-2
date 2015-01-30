@@ -1,38 +1,5 @@
-var ANIMATION =(function(){
-	var fnFadeIn = function(element){
-		var opacity = 0;
-		element.style.display = 'block';
-		function fade(){
-			opacity = opacity+0.1;
-			element.style.opacity = opacity;
-			if(element.style.opacity+0.1>1)
-				clearInterval(id);
-		}
 
-		var id = setInterval(fade, 10);
-	}
-
-	var fnFadeOut = function(element){
-		var opacity = 1;
-		function fade(){
-			opacity = opacity - 0.1;
-			element.style.opacity = opacity;
-			if(element.style.opacity-0.1===0){
-				clearInterval(id);
-				element.style.display = "none";
-			}
-		}
-
-		var id = setInterval(fade, 10);
-	}
-
-	return{
-		fnFadeIn: fnFadeIn,
-		fnFadeOut: fnFadeOut
-	}
-})();
-
-var INDEX = (function(ANIMATION){
+var INDEX = (function(){
 
 	var fnCambiarTamanio = function(){
 		var height = window.innerHeight;
@@ -75,8 +42,7 @@ var INDEX = (function(ANIMATION){
 				botones[0].style.display = 'none';
 				botones[1].style.display = 'block';
 				menu_principal.setAttribute('activado', 'true');
-				//contenedor_menu.style.display = 'block';
-				ANIMATION.fnFadeIn(contenedor_menu);
+				JUtil.get('.contenedor-menu').fadeIn();
 				document.body.style.overflowY = 'hidden'
 			}
 			else{
@@ -84,7 +50,7 @@ var INDEX = (function(ANIMATION){
 				botones[0].style.display = 'block';
 				botones[1].style.display = 'none';
 				menu_principal.setAttribute('activado', 'false');
-				ANIMATION.fnFadeOut(contenedor_menu);
+				//JUtil.get('.contenedor-menu').fadeOut();
 				document.body.style.overflowY = 'auto'	
 			}
 		}
@@ -97,7 +63,7 @@ var INDEX = (function(ANIMATION){
 		fnCargarMenuPrincipal: fnCargarMenuPrincipal
 	}
 
-})(ANIMATION);
+})();
 
 window.onload= function(){
 	
