@@ -1,0 +1,52 @@
+html(lang="ES")
+	block variables
+	head
+		include ../includes/header.jade
+	body
+		div#wrapper
+			div.contenedor-cabecera
+				div(class="#{clase}", id="cabecera")
+					div.cabecera-principal
+						div.cabecera-logo
+							a(href="javascript:void(0)")
+								img(src="http://static.tumblr.com/1ccbc9v/0Nlnbwlt4/logo-elegant.png")
+						div.cabecera-menu
+							div Menu
+							div(id="boton-menu", activado="false")
+								i(class="fa fa-bars bar-icon")
+								i(class="fa fa-close hide close-icon")
+						div(class="contenedor-menu hide")
+							ul(class="nav-principal")
+								li
+									div who
+									a(href="about.html") about us
+									a(href="javascript:void(0)") blog
+								li 
+									div what
+									a(href="javascript:void(0)") see our project
+									a(href="javascript:void(0)") project page
+								li 
+									div where
+									a(href="javascript:void(0)") contact us
+								li 
+									div follow us
+									div.social-buttons
+										div
+											i(class="fa fa-facebook")
+										div
+											i(class="fa fa-instagram")
+										div
+											i(class="fa fa-dribbble")
+										div
+											i(class="fa fa-twitter")
+					if titulo_principal
+						div.titulo-principal
+							h1 Say <i>Haloa</i> to your Portfolio
+			block content
+			div.pie-de-pagina
+				div(class="ancho-maximo grid contenedor-pie-pagina")
+					div.columna-6
+						h1(class="t-a-l") &copy; 2015 Developed by Jorge Torres
+					div.columna-6
+						h1(class="t-a-r") Email: jtorrescolan@gmail.com
+		include ../includes/footer.jade

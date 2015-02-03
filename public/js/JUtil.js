@@ -22,6 +22,57 @@
 
 	Util.prototype = {
 
+		addClass: function(){
+			var len = this.length,
+				elemento = this,
+				className = arguments[0];
+
+			if(typeof className === 'string'){
+				while(len--){
+					if(elemento[len].className.split(' ').indexOf(className) === -1)
+						elemento[len].className += ' '+className;
+				}
+			}
+		},
+
+		removeClass: function(){
+			var len = this.length,
+				elemento = this,
+				className = arguments[0];
+
+			if(typeof className === 'string'){
+				while(len--){
+					if(elemento[len].className.split(' ').indexOf(className) !== -1)
+						elemento[len].className = elemento[len].className.replace(className,'');
+					else
+						console.error('La clase no existe');
+				}
+			}
+		},
+
+		find: function(selector){
+
+			var len = this.length,
+				elemento = this,
+				el_array = [];
+
+			while(len--){
+				var findit = elemento[len].querySelectorAll(selector),
+					len_findit = findit.length;
+				for(var i=0;i<len_findit;i++){
+					el_array.push(findit[i]);
+				}
+			}
+
+			var ar_len = el_array.length;
+			elemento.length = ar_len;
+			for(var j=0;j<ar_len;j++){
+				elemento[j] = el_array[j];
+			}
+
+			return elemento;
+		},
+
 		fadeIn: function(){
 			var len = this.length;
 			var elemento = this;
@@ -38,6 +89,7 @@
 				})(len);
 			}
 		},
+
 		fadeOut: function(){
 			var len = this.length;
 			var elemento = this;
@@ -55,9 +107,11 @@
 				})(len)
 			}
 		},
+
 		rotate: function(){
 			var len = this.length;
 			var elemento = this;
+			var elemento_2 = arguments[0];
 			while(len--){
 				(function(index){
 					var x=0;
@@ -69,18 +123,29 @@
 						x=x+10;
 						if(x>360){
 							clearInterval(id);
+							if(typeof elemento_2 === 'object'){
+								elemento[index].style.display = 'none';
+								elemento_2[index].style.display = 'block'
+							}
 						}
 					},10)
 				})(len);
 			}
-
-			return this;
 		},
+
 		hide: function(){
 			var len = this.length;
 			var elemento = this;
 			while(len--){
 				elemento[len].style.display = 'none';
+			}
+		},
+
+		show: function(){
+			var len = this.length,
+				elemento = this;
+			while(len--){
+				elemento[len].style.display = 'block';
 			}
 		}
 	}
