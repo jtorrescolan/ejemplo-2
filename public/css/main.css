@@ -304,7 +304,8 @@ button {
 .cabecera-about {
   background-image: url("../images/SW_CalebMorris1.jpg");
 }
-.cnt-about {
+.cnt-about,
+.cnt-work {
   padding: 150px 0px;
 }
 .cnt-about .descripcion {
@@ -338,6 +339,12 @@ button {
   position: absolute;
   height: 100%;
   width: 100%;
+}
+.cabecera-work {
+  background-image: url("../images/projects-bg_img.gif");
+}
+.cnt-work .descripcion {
+  margin-bottom: 0px;
 }
 .grid>div {
   float: left;

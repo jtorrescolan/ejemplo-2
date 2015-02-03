@@ -1,10 +1,10 @@
 
-var INDEX = (function(){
+var APP = (function(){
 
 	var fnCambiarTamanio = function(){
 		var height = window.innerHeight;
 		document.getElementById('cabecera').style.height = height+'px';
-		document.querySelector('.contenedor-menu').style.height = (height-93)+'px';
+		document.querySelector('.contenedor-menu').style.height = (height-90)+'px';
 
 	}
 
@@ -14,7 +14,7 @@ var INDEX = (function(){
 			var height = window.innerHeight,
 				elemento = JUtil.get('.cabecera-principal')[0];
 			document.getElementById('cabecera').style.height = height+'px';
-			document.querySelector('.contenedor-menu').style.height = (height-93)+'px';
+			document.querySelector('.contenedor-menu').style.height = (height-90)+'px';
 		}
 		window.onscroll = function(evt){
 			
@@ -91,10 +91,10 @@ window.onload= function(){
 	
 	/* Página inicial */
 
-	INDEX.fnEventos();
-	INDEX.fnCambiarTamanio();
-	INDEX.fnCargarMapa();
-	INDEX.fnCargarMenuPrincipal();
+	APP.fnEventos();
+	APP.fnCambiarTamanio();
+	APP.fnCargarMapa();
+	APP.fnCargarMenuPrincipal();
 
 	/* Fin Página inicial*/
 }

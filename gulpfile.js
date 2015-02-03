@@ -26,6 +26,7 @@ gulp.task('browser-sync', function(){
 });
 
 gulp.task('frontend', ['browser-sync'], function(){
+	gulp.watch('app/stylus/*.styl', ['stylus', b_sync.reload]);
 	gulp.watch('app/stylus/*/*.styl', ['stylus', b_sync.reload]);
 	gulp.watch('app/template/*.jade', ['jade', b_sync.reload]);
 });
