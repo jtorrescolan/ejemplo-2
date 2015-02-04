@@ -1,0 +1,48 @@
+extends layout/_layout.jade
+
+block variables
+	- var clase = "cabecera cabecera-contact"
+	- var titulo_principal = false
+
+block title
+	title Contact
+
+block content
+	div(class="contenedor-principal")
+		div(class="cnt-contact ancho-maximo")
+			div(class="sub-title texto-centrado")
+				h4 this is it
+			div(class="title texto-centrado")
+				h1 Contact Us
+			div(class="grid cnt-contact__grid")
+				div(class="columna-2 cnt-contact__grid--pequenio color-1")
+					div.contenedor-titulo
+						div.titulo-contacto
+							h3 -
+						div.descripcion-contacto
+							h3 Rua Serpa Pinto,
+							h3 Lisbon, Portugal
+				div(class="columna-8 cnt-contact__grid--grande")
+					div
+						div.contact-imagen
+							img(src="images/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg", alt="")
+				div(class="columna-8 cnt-contact__grid--grande")
+					div.contenedor-descripcion
+						div.descripcion
+							p
+								|Good design as little design as posible.
+								|Good design is to chance. My goal is
+								|making something memorable and
+								|especially the consumer. Good design is
+								|aesthetic. Care and aesthetic. Good design
+								|emphasises the consumer. It does not only
+								|functional.
+				div(class="columna-2 cnt-contact__grid--pequenio color-2")
+					div.contenedor-titulo
+						div.titulo-contacto
+							h3 -
+						div.descripcion-contacto
+							h3 +88 (0) 101 0000000
+							h3 +88 (0) 101 0000000
+			div(class="contenedor-boton texto-centrado")
+				a(href="javascript:void(0)") shote us an email
