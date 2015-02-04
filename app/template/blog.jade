@@ -1,0 +1,80 @@
+extends layout/_layout.jade
+
+block variables
+	- var clase = "cabecera cabecera-blog"
+	- var titulo_principal = false
+
+block title
+	title Blog
+
+block content
+	div(class="contenedor-principal cnt-blog")
+		div(class="grid ancho-maximo--project cnt-blog-grid")
+			div(class="columna-8")
+				div.blog-descripcion
+					div.blog-imagen
+						img(src="images/tumblr_na06rsMKCT1tubinno1_1280.jpg", alt="")
+					div.title 
+						h1 this is the title of your post
+					div.sub-title 
+						h4 14 de setiembre de 2014
+					div.descripcion
+						p
+							|This looks. I want to complexity. That's come to testify to complexity. It's about an 
+							|object, we kept going and i figured out some basic stuff that acknowledges its very 
+							|minimalist way beyond the traditions of function from a clutterfree product that form 
+							|and value on ideas and simplicity. What products have disconnected function of 
+							|anything of the computer.
+					div(class="contenedor-boton texto-centrado boton-blog")
+						a(href="javascript:void(0)") Read More
+				div.blog-descripcion
+					div.blog-imagen
+						img(src="images/tumblr_n8q3ocYvxA1tubinno1_1280.jpg", alt="")
+					div.title 
+						h1 this is the title of your post
+					div.sub-title 
+						h4 14 de setiembre de 2014
+					div.descripcion
+						p
+							|This looks. I want to complexity. That's come to testify to complexity. It's about an 
+							|object, we kept going and i figured out some basic stuff that acknowledges its very 
+							|minimalist way beyond the traditions of function from a clutterfree product that form 
+							|and value on ideas and simplicity. What products have disconnected function of 
+							|anything of the computer.
+					div(class="contenedor-boton texto-centrado boton-blog")
+						a(href="javascript:void(0)") Read More
+				div.grid
+					div.columna-6
+					div.columna-6
+						div(class="contenedor-boton texto-centrado b-blog-boton")
+							a(href="javascript:void(0)") Load More Post
+			div(class="columna-2")
+				div(class="p-l-60 p-r-20")
+					div.cnt-block
+						div.cnt-block__title
+							h3 Recent Post
+						div.cnt-block__links
+							a(href="javascript:void(0)") This is the title of your post
+							a(href="javascript:void(0)") This is the title of your post
+							a(href="javascript:void(0)") This is the title of your post
+							a(href="javascript:void(0)") This is the title of your post
+					div.cnt-block
+						div.cnt-block__title
+							h3 Categories
+						div.cnt-block__links
+							a(href="javascript:void(0)") Art
+							a(href="javascript:void(0)") Business
+							a(href="javascript:void(0)") Design
+							a(href="javascript:void(0)") Code
+					div.cnt-block
+						div.cnt-block__title
+							h3 Projects
+						div
+							a(href="javascript:void(0)")
+								div(class="contenedor-imagen ctn-imagen-2 contenedor-imagen--mini")
+							a(href="javascript:void(0)")
+								div(class="contenedor-imagen ctn-imagen-3 contenedor-imagen--mini")
+							a(href="javascript:void(0)")
+								div(class="contenedor-imagen ctn-imagen-4 contenedor-imagen--mini")
+							a(href="javascript:void(0)")
+								div(class="contenedor-imagen ctn-imagen-5 contenedor-imagen--mini")

@@ -107,6 +107,9 @@ button {
   padding: 15px;
   text-align: center;
 }
+.nav-principal>li>a:hover {
+  font-weight: bold;
+}
 .social-buttons {
   width: 250px;
   margin: 0 auto;
@@ -443,6 +446,75 @@ button {
 .color-2 {
   background-color: #000;
 }
+.cabecera-blog {
+  background-image: url("../images/tumblr_nau9zqjZay1tubinno1_1280.jpg");
+}
+.cnt-blog {
+  padding: 70px 0px;
+}
+.cnt-blog-grid {
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+.blog-descripcion {
+  padding: 30px;
+  background: #fff;
+  margin-bottom: 60px;
+}
+.blog-descripcion .title {
+  margin-bottom: 20px;
+}
+.blog-descripcion .sub-title {
+  margin-bottom: 40px;
+}
+.blog-descripcion .title h1 {
+  font-size: 35px;
+}
+.blog-descripcion p {
+  font-size: 19px;
+}
+.blog-descripcion .sub-title h4 {
+  font-size: 14px;
+}
+.blog-descripcion .boton-blog a {
+  width: 25%;
+}
+.blog-imagen {
+  position: relative;
+  height: 350px;
+  background: #808080;
+  margin-bottom: 35px;
+}
+.blog-imagen img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.b-blog-boton a {
+  background-color: #f9f9f9;
+}
+.cnt-block .cnt-block__title {
+  border-bottom: 4px solid #c5af28;
+  margin-bottom: 30px;
+}
+.cnt-block__title h3 {
+  font-size: 30px;
+  padding: 10px 0px;
+  color: #5a5c5e;
+}
+.cnt-block__links {
+  margin-bottom: 50px;
+}
+.cnt-block__links a {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #5a5c5e;
+}
+.cnt-block__links a:hover {
+  color: #c5af28;
+}
 .grid>div {
   float: left;
   min-height: 5px;
@@ -490,6 +562,12 @@ button {
 }
 .t-a-r {
   text-align: right;
+}
+.p-l-60 {
+  padding-left: 60px;
+}
+.p-r-20 {
+  padding-right: 20px;
 }
 .hide {
   display: none;
